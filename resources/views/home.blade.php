@@ -1,23 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+<b-container fluid  style="height: calc(100vh - 56px);">
+  <b-row class="h-100" no-gutters>
+    <b-col cols="4" >
+      <contact-list-component>
+      </contact-list-component>
+    </b-col>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <b-col cols="8">
+      <active-conversation-component></active-conversation-component>
+    </b-col>
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  </b-row>
+</b-container>
+
 @endsection

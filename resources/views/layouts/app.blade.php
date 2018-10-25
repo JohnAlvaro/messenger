@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}" class="h-100">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +13,12 @@
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
-<body>
+<body class="h-100">
 
   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
       {{ csrf_field() }}
   </form>
-    <div id="app">
-
+    <div id="app" class="h-100">
       <b-navbar toggleable type="light" variant="light">
         <b-navbar-toggle target="nav_text_collapse"></b-navbar-toggle>
 
@@ -43,11 +42,7 @@
           @endguest
         </b-navbar-nav>
         </b-collapse>
-    </b-navbar>
-
-
-
-
+      </b-navbar>
         @yield('content')
     </div>
 
